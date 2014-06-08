@@ -1,0 +1,23 @@
+panier_front_homepage:
+    pattern:  /front/produit
+    defaults: { _controller: PanierFrontBundle:Default:index }
+
+panier_front_ajouter:
+    pattern:  /front/ajouter
+    defaults: { _controller: PanierFrontBundle:Default:ajouter }
+
+panier_front_panier:
+    pattern:  /front/panier
+    defaults: { _controller: PanierFrontBundle:Default:panier }
+
+panier_front_spr:
+    pattern:  /front/supprimer/{detail}
+    defaults: { _controller: PanierFrontBundle:Default:supprimer }
+
+panier_front_modifierQte:
+    pattern:  /front/modifierQte
+    defaults: { _controller: PanierFrontBundle:Default:modifierQte }
+
+panier_front_saveCart:
+    pattern:  /front/saveCart
+    defaults: { _controller: PanierFrontBundle:Default:saveCart }

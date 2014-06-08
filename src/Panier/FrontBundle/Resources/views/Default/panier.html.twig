@@ -1,0 +1,28 @@
+<h1>
+	Liste des produits de votre panier
+</h1>
+
+{% if panier.libelleProduit|length>0 %}
+
+<form method="POST" action="{{ path("panier_front_modifierQte") }}">
+	{% for a in 0..panier.libelleProduit|length-1 %}
+		{{ panier.libelleProduit[a] }} - 
+		{{ panier.taille[a] }} - 
+		{{ panier.couleur[a] }} -
+		<input type="text" value="{{ panier.qteProduit[a] }}" name="q[]" /> | 
+
+		<a href="{{ path("panier_front_spr", {'detail' : panier.libelleProduit[a]~'-'~panier.taille[a]~'-'~panier.couleur[a]}) }}">Supprimer</a>
+
+		<br /><br />
+	{% endfor %}
+
+	<input type="hidden" name="action" value="refresh"/>
+	<input type="submit" value="Mettre à jour quantité" />
+</form>
+		
+	<a href="{{ path("panier_front_saveCart") }}">Enregistrer la commande</a>
+
+
+{% else %}
+	Votre panier est vide!
+{% endif %}

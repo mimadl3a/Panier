@@ -1,0 +1,8 @@
+panier_front:
+    resource: "@PanierFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+panier_admin:
+    resource: "@PanierAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+

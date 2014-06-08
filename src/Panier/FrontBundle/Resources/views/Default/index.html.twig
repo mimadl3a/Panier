@@ -1,0 +1,15 @@
+<h1>
+	Liste des produits
+</h1>
+
+{% for produit in produits %}
+	<form method="GET" action="{{ path('panier_front_ajouter') }}">
+		{{ produit.libelle }}<br>
+		libelle<input type="text" name="libelle" /><br>
+		taille<input type="text" name="taille" /><br>
+		couleur<input type="text" name="couleur" /><br>
+		qte<input type="text" name="qte" /><br>
+		prix<input type="text" name="prix" /><br>
+		<input type="submit" value="Ajouter au panier" /><br>
+	</form>
+{% endfor %}

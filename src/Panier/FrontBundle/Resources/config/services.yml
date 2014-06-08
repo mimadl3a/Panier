@@ -1,0 +1,7 @@
+parameters:
+#    panier_front.example.class: Panier\FrontBundle\Example
+
+services:
+#    panier_front.example:
+#        class: %panier_front.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
